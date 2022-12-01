@@ -59,7 +59,7 @@ def get_pie_chart(entered_site):
     else:
         filtered_df = filtered_df[filtered_df['Launch Site']== entered_site]
         filtered_df = filtered_df.groupby(['Launch Site','class']).size().reset_index(name='class count')
-        fig = px.pie(filtered_df, values='class count', names=['Failure','Success'], title=f"Total Successfull Launches from {entered_site}")
+        fig = px.pie(filtered_df, values='class count', names=['Failure','Success'], title=f"Total Successful Launches from {entered_site}")
         return fig
 # TASK 4:
 # Add a callback function for `site-dropdown` and `payload-slider` as inputs, `success-payload-scatter-chart` as output
